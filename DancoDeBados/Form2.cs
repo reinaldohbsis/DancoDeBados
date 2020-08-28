@@ -20,19 +20,20 @@ namespace DancoDeBados
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            var agenda = new Agenda()
-            {
-                Email = txt_email.Text,
-                Nome = txt_nome.Text,
-                Telefone = txt_telefone.Text
+            //var agenda = new Agenda()
+            //{
+            //    Email = txt_email.Text,
+            //    Nome = txt_nome.Text,
+            //    Telefone = txt_telefone.Text
 
-            };
+            //};
 
-            using (var db = new LiteDatabase("Filename=criandoUsandoDB"))
-            {
-                db.GetCollection<Agenda>().Insert(agenda);
-            }
+            //using (var db = new LiteDatabase("Filename=criandoUsandoDB"))
+            //{
+            //    db.GetCollection<Agenda>().Insert(agenda);
+            //}
 
+            Comandos.Adicionar(txt_nome.Text, txt_email.Text, txt_telefone.Text);
             this.Close();
         }
 
